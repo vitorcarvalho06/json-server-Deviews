@@ -1,10 +1,36 @@
 {
   "users": [
     {
-      "email": "kenzinho@mail.com",
-      "password": "$2a$10$YQiiz0ANVwIgpOjYXPxc0O9H2XeX3m8OoY1xk7OGgxTnOJnsZU7FO",
-      "name": "Kenzinho",
-      "age": 38,
+      "email": "frederico@mail.com",
+      "password": "$2a$10$qxpxGQMBE9Q5wtwMebZbZOW.RgtMeGHBGHpEVfPlwES.A2Hx1xMsi",
+      "name": "Frederico",
+      "nickname": "FredericoCãoDev",
+      "bio": "Eu sou um pug dev!",
+      "techs": [
+        "Javascript",
+        "React"
+      ],
+      "id": 1
+    },
+    {
+      "email": "duquesa@mail.com",
+      "password": "$2a$10$LIKPKhcv69ryW7YDIXpyd.zFv0iHhTGvQu3cpFEFGMgaVc5vlhCjG",
+      "name": "Duquesa",
+      "nickname": "DuquesaDev",
+      "bio": "Eu sou a Duquesa dev!",
+      "techs": [
+        "Javascript",
+        "React"
+      ],
+      "id": 2
+    }
+  ],
+  "posts": [
+    {
+      "content": "Meu primeiro post",
+      "img": "https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg",
+      "userId": 1,
+      "date": "30/08/2022",
       "id": 1
     }
   ]

@@ -6,7 +6,7 @@ Essa é a API da Deviews
 
 A API tem um total de 5 endpoints, sendo em volta principalmente do usuário - podendo cadastrar seu perfil, fazer login, fazer posts e dar like em outros posts.
 
-O url base da API é https://movies-server-kenzie.herokuapp.com/
+O url base da API é https://deviews.herokuapp.com/
 
 ## Rotas que não precisam de autenticação
 

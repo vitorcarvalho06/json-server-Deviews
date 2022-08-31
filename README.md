@@ -100,9 +100,7 @@ Após o usuário estar logado, ele deve conseguir fazer novas postagens, editar 
   "content": "Meu primeiro post",
   "img": "https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg",
   "userId": 1,
-  "date": "30/08/2022",
-  "response": [],
-  "like": 0
+  "date": "30/08/2022"
 }
 ```
 
@@ -183,4 +181,102 @@ Não é necessário um corpo da requisição.
 
 ```json
 Não é necessário um corpo da requisição.
+```
+
+<h2 align ='center'> Responder um post </h2>
+
+`POST /answers - FORMATO DA REQUISIÇÃO`
+
+```json
+{
+  "content": "A foto ficou perfeita",
+  "userId": 1,
+  "postId": 1,
+  "date": "31/08/2022"
+}
+```
+
+O campo userId deve receber o Id do usuario
+O campo postId deve receber o Id do post
+
+`POST /answers - FORMATO DA RESPOSTA - STATUS 201`
+
+```json
+{
+  "postId": 1,
+  "content": "A foto ficou perfeita",
+  "userId": 1,
+  "date": "31/08/2022",
+  "id": 1
+}
+```
+
+<h2 align ='center'> Dar fire em posts </h2>
+
+> Importante: sempre que for criado um novo post fazer a requisição no end point fires para vincular ao post.
+
+`POST /fires - FORMATO DA REQUISIÇÃO`
+
+```json
+{
+  "postId": 1,
+  "count": 0
+}
+```
+
+O campo postId deve receber o Id do post.
+
+`POST /fires - FORMATO DA RESPOSTA - STATUS 201`
+
+```json
+{
+  "postId": 1,
+  "count": 0,
+  "id": 1
+}
+```
+
+<h2 align ='center'> Dar fire em resposta </h2>
+
+> Importante: sempre que for criado um novo resposta fazer a requisição no end point fires para vincular a resposta.
+
+`POST /fires - FORMATO DA REQUISIÇÃO`
+
+```json
+{
+  "answerId": 1,
+  "count": 0
+}
+```
+
+O campo answerId deve receber o Id da resposta.
+
+`POST /fires - FORMATO DA RESPOSTA - STATUS 201`
+
+```json
+{
+  "answerId": 1,
+  "count": 0,
+  "id": 1
+}
+```
+
+<h2 align ='center'> Atualizar fire </h2>
+
+`PATCH /fires/:fire_id - FORMATO DA REQUISIÇÃO`
+
+```json
+{
+  "count": 1
+}
+```
+
+`PATCH /fires/:fire_id - FORMATO DA RESPOSTA - STATUS 201`
+
+```json
+{
+  "answerId": 1,
+  "count": 1,
+  "id": 1
+}
 ```

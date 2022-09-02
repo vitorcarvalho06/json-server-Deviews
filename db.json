@@ -6,10 +6,7 @@
       "name": "Frederico",
       "nickname": "FredericoCãoDev",
       "bio": "Eu sou um pug dev!",
-      "techs": [
-        "Javascript",
-        "React"
-      ],
+      "techs": ["Javascript", "React"],
       "id": 1
     },
     {
@@ -18,10 +15,7 @@
       "name": "Duquesa",
       "nickname": "DuquesaDev",
       "bio": "Eu sou a Duquesa dev!",
-      "techs": [
-        "Javascript",
-        "React"
-      ],
+      "techs": ["Javascript", "React"],
       "id": 2
     }
   ],
@@ -34,52 +28,29 @@
       "id": 1
     },
     {
-      "content": "Meu primeiro post",
+      "content": "Meu segundo post",
       "img": "https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg",
       "userId": 2,
       "date": "30/08/2022",
-      "id": 2
-    }
-  ],
-  "answers": [
-    {
-      "postId": 1,
-      "content": "A foto ficou perfeita",
-      "userId": 2,
-      "date": "30/08/2022",
-      "id": 1
-    },
-    {
-      "postId": 1,
-      "content": "A foto ficou perfeita",
-      "userId": 2,
-      "date": "31/08/2022",
-      "id": 2
-    },
-    {
-      "postId": 1,
-      "content": "Obrigado",
-      "userId": 1,
-      "date": "31/08/2022",
-      "id": 3
-    }
-  ],
-  "fires": [
-    {
-      "postId": 2,
-      "count": 1,
-      "userId": 1,
-      "id": 1
-    },
-    {
-      "answers": 1,
-      "count": 0,
-      "id": 2
-    },
-    {
-      "answerId": 1,
-      "count": 1,
-      "id": 3
+      "techs": ["Javascript", "Node"],
+      "id": 2,
+      "answers": [
+        {
+          "content": "A foto ficou perfeita",
+          "userId": 2,
+          "date": "30/08/2022",
+          "id": 1,
+          "fires": 2
+        },
+        {
+          "content": "Obrigado",
+          "userId": 1,
+          "date": "31/08/2022",
+          "id": 2,
+          "fires": 1
+        }
+      ],
+      "fires": 2
     }
   ]
 }

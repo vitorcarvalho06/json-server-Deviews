@@ -7,6 +7,7 @@
       "nickname": "FredericoCãoDev",
       "bio": "Eu sou um pug dev!",
       "techs": ["Javascript", "React"],
+      "img": "https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg",
       "id": 1
     },
     {
@@ -16,6 +17,7 @@
       "nickname": "DuquesaDev",
       "bio": "Eu sou a Duquesa dev!",
       "techs": ["Javascript", "React"],
+      "img": "https://www.helpguide.org/wp-content/uploads/king-charles-spaniel-resting-head-768.jpg",
       "id": 2
     }
   ],
@@ -25,6 +27,11 @@
       "img": "https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg",
       "userId": 1,
       "date": "30/08/2022",
+      "userInfo": {
+        "name": "Frederico",
+        "nickname": "FredericoCãoDev",
+        "img": "https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg"
+      },
       "id": 1
     },
     {
@@ -32,25 +39,109 @@
       "img": "https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg",
       "userId": 2,
       "date": "30/08/2022",
-      "techs": ["Javascript", "Node"],
+      "userInfo": {
+        "name": "Duquesa",
+        "nickname": "DuquesaDev",
+        "img": "https://www.helpguide.org/wp-content/uploads/king-charles-spaniel-resting-head-768.jpg"
+      },
+      "id": 2
+    }
+  ],
+  "answers": [
+    {
+      "content": "Teste dois de resposta",
+      "userId": 1,
+      "date": "32/08/2022",
+      "userInfo": {
+        "name": "Frederico",
+        "nickname": "FredericoCãoDev",
+        "img": "https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg"
+      },
+      "postId": 1
+    },
+    {
+      "content": "A foto ficou perfeita",
+      "userId": 2,
+      "date": "30/08/2022",
+      "userInfo": {
+        "name": "Duquesa",
+        "nickname": "DuquesaDev",
+        "img": "https://www.helpguide.org/wp-content/uploads/king-charles-spaniel-resting-head-768.jpg"
+      },
+      "id": 1,
+      "postId": 2
+    },
+    {
+      "content": "Obrigado",
+      "userId": 1,
+      "date": "31/08/2022",
+      "userInfo": {
+        "name": "Frederico",
+        "nickname": "FredericoCãoDev",
+        "img": "https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg"
+      },
       "id": 2,
-      "answers": [
-        {
-          "content": "A foto ficou perfeita",
-          "userId": 2,
-          "date": "30/08/2022",
-          "id": 1,
-          "fires": 2
-        },
-        {
-          "content": "Obrigado",
-          "userId": 1,
-          "date": "31/08/2022",
-          "id": 2,
-          "fires": 1
-        }
-      ],
-      "fires": 2
+      "postId": 2
+    },
+    {
+      "content": "Teste dois de resposta com o usuario 1",
+      "userId": 1,
+      "date": "31/08/2022",
+      "userInfo": {
+        "name": "Frederico",
+        "nickname": "FredericoCãoDev",
+        "img": "https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg"
+      },
+      "id": 3,
+      "postId": 1
+    },
+    {
+      "content": "Teste dois de resposta com o usuario 2",
+      "userId": 2,
+      "date": "31/08/2022",
+      "fires": 0,
+      "postId": 1,
+      "userInfo": {
+        "name": "Duquesa",
+        "nickname": "DuquesaDev",
+        "img": "https://www.helpguide.org/wp-content/uploads/king-charles-spaniel-resting-head-768.jpg"
+      },
+      "id": 4
+    },
+    {
+      "content": "Teste dois de resposta com o usuario 3",
+      "userId": 2,
+      "date": "03/09/2022",
+      "fires": 0,
+      "postId": 1,
+      "userInfo": {
+        "name": "Duquesa",
+        "nickname": "DuquesaDev",
+        "img": "https://www.helpguide.org/wp-content/uploads/king-charles-spaniel-resting-head-768.jpg"
+      },
+      "id": 5
+    }
+  ],
+  "fires": [
+    {
+      "userId": 1,
+      "postId": 1,
+      "id": 1
+    },
+    {
+      "userId": 2,
+      "postId": 1,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "postId": 2,
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "postId": 2,
+      "id": 4
     }
   ]
 }

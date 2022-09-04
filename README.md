@@ -14,7 +14,7 @@ O url base da API é https://deviews.herokuapp.com/
 
 POST /register <br/>
 
-Esse endpoint irá cadastrar o usuário, sendo que os campos obrigatórios são os de email, password, name, nickname, bio, techs.
+Esse endpoint irá cadastrar o usuário, sendo que os campos obrigatórios são os de email, password, name, username, bio, techs.
 Você pode ficar a vontade para adicionar qualquer outra propriedade no corpo do cadastro dos usuários.
 
 `POST /register - FORMATO DA REQUISIÇÃO`
@@ -24,7 +24,7 @@ Você pode ficar a vontade para adicionar qualquer outra propriedade no corpo do
   "email": "frederico@mail.com",
   "password": "123456",
   "name": "Frederico",
-  "nickname": "FredericoCãoDev",
+  "username": "FredericoCãoDev",
   "bio": "Eu sou um pug dev!",
   "techs": ["Javascript", "React"]
 }
@@ -40,7 +40,7 @@ Caso dê tudo certo, a resposta será assim:
   "user": {
     "email": "frederico@mail.com",
     "name": "Frederico",
-    "nickname": "FredericoCãoDev",
+    "username": "FredericoCãoDev",
     "bio": "Eu sou um pug dev!",
     "techs": ["Javascript", "React"],
     "id": 1
@@ -73,7 +73,7 @@ Caso dê tudo certo, a resposta será assim:
   "user": {
     "email": "frederico@mail.com",
     "name": "Frederico",
-    "nickname": "FredericoCãoDev",
+    "username": "FredericoCãoDev",
     "bio": "Eu sou um pug dev!",
     "techs": ["Javascript", "React"],
     "id": 1
@@ -100,11 +100,16 @@ Após o usuário estar logado, ele deve conseguir fazer novas postagens, editar 
   "content": "Meu primeiro post",
   "img": "https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg",
   "userId": 1,
-  "date": "30/08/2022"
+  "date": "30/08/2022",
+  "userInfo": {
+    "name": "Frederico",
+    "username": "FredericoCãoDev",
+    "img": "https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg"
+  }
 }
 ```
 
-O campo userId deve receber o Id do usuario
+O campo userId deve receber o Id do usuario e o campo userInfo deve receber as informações do usuario logado
 
 `POST /posts - FORMATO DA RESPOSTA - STATUS 201`
 
@@ -114,6 +119,11 @@ O campo userId deve receber o Id do usuario
   "img": "https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg",
   "userId": 1,
   "date": "30/08/2022",
+  "userInfo": {
+    "name": "Frederico",
+    "username": "FredericoCãoDev",
+    "img": "https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg"
+  },
   "id": 1
 }
 ```
@@ -137,6 +147,11 @@ O campo userId deve receber o Id do usuario
   "img": "https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg",
   "userId": 1,
   "date": "30/08/2022",
+  "userInfo": {
+    "name": "Frederico",
+    "username": "FredericoCãoDev",
+    "img": "https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg"
+  },
   "id": 1
 }
 ```
@@ -168,7 +183,7 @@ Não é necessário um corpo da requisição.
   "email": "frederico@mail.com",
   "password": "$2a$10$MWgi3MwcbgSfZIYjefsaPuGRgmJoechcArpU2qkOkA8FCjsbcDdVa",
   "name": "Frederico II",
-  "nickname": "FredericoCãoDev",
+  "username": "FredericoCãoDev",
   "bio": "Eu sou um cão dev!",
   "techs": ["Javascript", "React", "Node"],
   "id": 1
@@ -192,6 +207,11 @@ Não é necessário um corpo da requisição.
   "content": "A foto ficou perfeita",
   "userId": 1,
   "postId": 1,
+  "userInfo": {
+    "name": "Frederico",
+    "username": "FredericoCãoDev",
+    "img": "https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg"
+  },
   "date": "31/08/2022"
 }
 ```
@@ -207,6 +227,11 @@ O campo postId deve receber o Id do post
   "content": "A foto ficou perfeita",
   "userId": 1,
   "date": "31/08/2022",
+  "userInfo": {
+    "name": "Frederico",
+    "username": "FredericoCãoDev",
+    "img": "https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg"
+  },
   "id": 1
 }
 ```
@@ -219,8 +244,8 @@ O campo postId deve receber o Id do post
 
 ```json
 {
-  "postId": 1,
-  "count": 0
+  "userId": 1,
+  "postId": 1
 }
 ```
 
@@ -230,8 +255,8 @@ O campo postId deve receber o Id do post.
 
 ```json
 {
+  "userId": 1,
   "postId": 1,
-  "count": 0,
   "id": 1
 }
 ```
@@ -244,8 +269,8 @@ O campo postId deve receber o Id do post.
 
 ```json
 {
-  "answerId": 1,
-  "count": 0
+  "userId": 1,
+  "answersId": 1
 }
 ```
 
@@ -255,28 +280,8 @@ O campo answerId deve receber o Id da resposta.
 
 ```json
 {
-  "answerId": 1,
-  "count": 0,
-  "id": 1
-}
-```
-
-<h2 align ='center'> Atualizar fire </h2>
-
-`PATCH /fires/:fire_id - FORMATO DA REQUISIÇÃO`
-
-```json
-{
-  "count": 1
-}
-```
-
-`PATCH /fires/:fire_id - FORMATO DA RESPOSTA - STATUS 201`
-
-```json
-{
-  "answerId": 1,
-  "count": 1,
+  "userId": 1,
+  "answersId": 1,
   "id": 1
 }
 ```
